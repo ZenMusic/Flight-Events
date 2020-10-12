@@ -36,6 +36,8 @@ namespace FlightEvents.Data
         public string StopwatchCode { get; set; }
         public List<string> Leaderboards { get; set; }
         public List<string> LeaderboardLaps { get; set; }
+        public List<string> RacerCallsigns { get; set; }
+        public List<string> MarkedWaypoints { get; set; }
 
         public List<string> FlightPlanIds { get; set; }
 
@@ -57,6 +59,8 @@ namespace FlightEvents.Data
 
             if (Leaderboards != default) current.Leaderboards = Leaderboards;
             if (LeaderboardLaps != default) current.LeaderboardLaps = LeaderboardLaps;
+            if (RacerCallsigns != default) current.RacerCallsigns = RacerCallsigns;
+            if (MarkedWaypoints != default) current.MarkedWaypoints = MarkedWaypoints;
 
             if (FlightPlanIds != default) current.FlightPlanIds = FlightPlanIds;
         }

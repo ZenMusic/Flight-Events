@@ -27,6 +27,10 @@ export const recordsToLeaderboards = (records: LeaderboardRecord[]) => {
 }
 
 const Leaderboard = (props: LeaderboardProps) => {
+    if (!props.event.leaderboardLaps) {
+        return null;
+    }
+
     const milestones = ['Full race'];
     for (let i = 0; i < props.event.leaderboardLaps.length; i++) {
         milestones.push((i === 0 ? 'Start' : props.event.leaderboardLaps[i - 1]) + ' → ' + props.event.leaderboardLaps[i]);
